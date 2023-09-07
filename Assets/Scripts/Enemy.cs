@@ -23,5 +23,9 @@ public class Enemy : MonoBehaviour
         // 방향을 먼저 계산하고 속도를 곱해줘야 한다.
         enemyRb.AddForce(lookDirection * speed);
 
+        if(transform.position.y < -10)
+        {
+            Destroy(gameObject);
+        }
     }
 }
